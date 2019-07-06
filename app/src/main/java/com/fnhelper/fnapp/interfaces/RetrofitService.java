@@ -80,6 +80,7 @@ public class RetrofitService {
                         // .baseUrl("https://syx.ybveg.com/")
                           // .baseUrl("http://sy.ybveg.com/")
                         .baseUrl("http://172.16.2.123:8080/")
+                        .baseUrl("http://192.168.1.7:8080/") //家
                             //   .baseUrl("http://172.16.5.66:85/")
                             //    .baseUrl("http://172.16.2.39:85/")
                             //  .baseUrl("http://172.16.4.209:85/")
