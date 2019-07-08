@@ -1,4 +1,4 @@
-package com.fnhelper.fnapp.interfaces;
+package com.fnhelper.fnapp;
 
 import android.app.Application;
 
@@ -21,7 +21,9 @@ public class MyApplication extends Application {
                 .setDownsampleEnabled(true)
                 .setProgressiveJpegConfig(new SimpleProgressiveJpegConfig())
                 .build();
-        Fresco.initialize(this, config);
+      //  Fresco.initialize(this, config);
+
+    //Fresco.initialize(this);
 
     }
 

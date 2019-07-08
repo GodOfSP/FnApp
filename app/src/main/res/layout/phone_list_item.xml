@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:fresco="http://schemas.android.com/tools">
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/pic"
+        android:layout_width="190dp"
+        android:layout_height="220dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="12dp"
+        fresco:fadeDuration="300"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:placeholderImage="@color/wait_color"
+        fresco:placeholderImageScaleType="fitCenter"
+        fresco:failureImage="@drawable/error"
+        fresco:failureImageScaleType="centerInside"
+        fresco:retryImage="@drawable/retrying"
+        fresco:retryImageScaleType="centerCrop"
+        fresco:roundedCornerRadius="4dp"
+        fresco:roundBottomRight="true"
+        fresco:roundingBorderWidth="1dp"
+        fresco:roundingBorderColor="#a69d9c"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:tag="pic"
+ />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="sdfsdf"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@+id/pic"
+        app:layout_constraintTop_toTopOf="@+id/pic" />
+
+    <TextView
+        android:id="@+id/prize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="sdfsdf"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@+id/pic"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+    <TextView
+        android:id="@+id/sellPoint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="sdfsdf"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@+id/pic"
+        app:layout_constraintTop_toBottomOf="@+id/prize"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="10dp"
+        />
+
+
+</android.support.constraint.ConstraintLayout>

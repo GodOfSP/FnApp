@@ -53,6 +53,7 @@ public class RetrofitService {
 
 
     public static String userId = "";
+    public static String phoneId = "";
     public static String RESULT_OK = "200";
 
     /**

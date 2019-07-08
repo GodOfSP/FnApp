@@ -25,13 +25,14 @@ public class PhoneBean {
 
         private String CPU;
         private String FRONTCAMERA;
-        private int ID;
+        private String ID;
         private String OS;
-        private int PHONEID;
+        private String PHONEID;
         private String PHONENAME;
         private String PHONESCREENSIZE;
         private String PHONESIZE;
         private String PICS;
+        private String PIC;
         private String PRIZE;
         private String RAM;
         private String REARCAMERA;
@@ -39,9 +40,17 @@ public class PhoneBean {
         private String ROM;
         private String SCREENRESOLUTION;
         private String SELLPOINT;
-        private long TIMETOMARKET;
+        private String TIMETOMARKET;
 
-        public String getCPU() {
+    public String getPIC() {
+        return PIC;
+    }
+
+    public void setPIC(String PIC) {
+        this.PIC = PIC;
+    }
+
+    public String getCPU() {
             return CPU;
         }
 
@@ -57,11 +66,11 @@ public class PhoneBean {
             this.FRONTCAMERA = FRONTCAMERA;
         }
 
-        public int getID() {
+        public String getID() {
             return ID;
         }
 
-        public void setID(int ID) {
+        public void setID(String ID) {
             this.ID = ID;
         }
 
@@ -73,11 +82,11 @@ public class PhoneBean {
             this.OS = OS;
         }
 
-        public int getPHONEID() {
+        public String getPHONEID() {
             return PHONEID;
         }
 
-        public void setPHONEID(int PHONEID) {
+        public void setPHONEID(String PHONEID) {
             this.PHONEID = PHONEID;
         }
 
@@ -169,16 +178,35 @@ public class PhoneBean {
             this.SELLPOINT = SELLPOINT;
         }
 
-        public long getTIMETOMARKET() {
+        public String getTIMETOMARKET() {
             return TIMETOMARKET;
         }
 
-        public void setTIMETOMARKET(long TIMETOMARKET) {
+        public void setTIMETOMARKET(String TIMETOMARKET) {
             this.TIMETOMARKET = TIMETOMARKET;
         }
 
     @Override
     public String toString() {
-        return "PhoneBean{" + "CPU='" + CPU + '\'' + ", FRONTCAMERA='" + FRONTCAMERA + '\'' + ", ID=" + ID + ", OS='" + OS + '\'' + ", PHONEID=" + PHONEID + ", PHONENAME='" + PHONENAME + '\'' + ", PHONESCREENSIZE='" + PHONESCREENSIZE + '\'' + ", PHONESIZE='" + PHONESIZE + '\'' + ", PICS='" + PICS + '\'' + ", PRIZE='" + PRIZE + '\'' + ", RAM='" + RAM + '\'' + ", REARCAMERA='" + REARCAMERA + '\'' + ", RELATEDARTICLES='" + RELATEDARTICLES + '\'' + ", ROM='" + ROM + '\'' + ", SCREENRESOLUTION='" + SCREENRESOLUTION + '\'' + ", SELLPOINT='" + SELLPOINT + '\'' + ", TIMETOMARKET=" + TIMETOMARKET + '}';
+        return "PhoneBean{" +
+                "CPU='" + CPU + '\'' +
+                ", FRONTCAMERA='" + FRONTCAMERA + '\'' +
+                ", ID=" + ID +
+                ", OS='" + OS + '\'' +
+                ", PHONEID=" + PHONEID +
+                ", PHONENAME='" + PHONENAME + '\'' +
+                ", PHONESCREENSIZE='" + PHONESCREENSIZE + '\'' +
+                ", PHONESIZE='" + PHONESIZE + '\'' +
+                ", PICS='" + PICS + '\'' +
+                ", PIC='" + PIC + '\'' +
+                ", PRIZE='" + PRIZE + '\'' +
+                ", RAM='" + RAM + '\'' +
+                ", REARCAMERA='" + REARCAMERA + '\'' +
+                ", RELATEDARTICLES='" + RELATEDARTICLES + '\'' +
+                ", ROM='" + ROM + '\'' +
+                ", SCREENRESOLUTION='" + SCREENRESOLUTION + '\'' +
+                ", SELLPOINT='" + SELLPOINT + '\'' +
+                ", TIMETOMARKET=" + TIMETOMARKET +
+                '}';
     }
 }
