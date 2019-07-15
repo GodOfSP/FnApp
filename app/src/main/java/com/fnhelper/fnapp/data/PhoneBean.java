@@ -3,210 +3,191 @@ package com.fnhelper.fnapp.data;
 public class PhoneBean {
 
 
-        /**
-         * CPU : 楂橀€氶獊榫�855
-         * FRONTCAMERA : 1600涓囧儚绱�
-         * ID : 1
-         * OS : Android 9.0
-         * PHONEID : 1
-         * PHONENAME : 涓€鍔犳墜鏈�7 Pro
-         * PHONESCREENSIZE : 6.67鑻卞
-         * PHONESIZE : 162.6脳75.9脳8.8mm
-         * PICS : http://imgm6.cnmo-img.com.cn/handimg/2019/05/171604661g6emmyjocobcg.jpg,http://imgm.cnmo-img.com.cn/cnmo_product/23/660/cen53wm4sFK4Y.jpg,http://imgm3.cnmo-img.com.cn/cnmo_product/23/663/cenDWEeyNh6E.jpg
-         * PRIZE : 3999.00
-         * RAM : 6gb
-         * REARCAMERA : 4800+1600+800涓囧儚绱�
-         * RELATEDARTICLES : 鏀剧溂鍏ㄧ悆 涓€鍔�7 Pro 90Hz娴佷綋灞忓彈鍒版捣澶栧獟浣撲竴鑷村ソ璇�,http://smartcar.cnmo.com/news/665317.html
-         * ROM : 128gb
-         * SCREENRESOLUTION : 3120x1440鍍忕礌
-         * SELLPOINT : 闈㈤儴璇嗗埆,鎷嶇収鎵嬫満,鍏ㄩ潰灞�,鑷媿绁炲櫒,鍚庣疆涓夋憚,楠侀緳855,鍏牳鎵嬫満,澶у睆鎵嬫満,澶у閲忕數姹�,蹇厖鎵嬫満,鍏夊闃叉姈,2.5D寮ч潰灞�,鎸囩汗璇嗗埆,鏀寔NFC,娓告垙鎵嬫満,鏅鸿兘鎵嬫満,4G鎵嬫満
-         * TIMETOMARKET : 1558483200000
-         */
+    /**
+     * id : 1
+     * phoneId : 1
+     * phoneName : 一加手机7 Pro
+     * sellPoint : 大屏手机,大容量电池,快充手机,光学防抖,2.5D弧面屏
+     * prize : 3999
+     * timeToMarket : 2019-05-22
+     * phoneSize : 162.6×75.9×8.8mm
+     * phoneScreenSize : 6.67英寸
+     * screenResolution : 3120x1440像素
+     * RearCamera : 4800+1600+800万像素
+     * FrontCamera : 1600万像素
+     * os : Android 9.0
+     * cpu : 高通骁龙855
+     * ram : 6gb
+     * rom : 128gb
+     * pics : http://imgm6.cnmo-img.com.cn/handimg/2019/05/171604661g6emmyjocobcg.jpg,http://imgm.cnmo-img.com.cn/cnmo_product/23/660/cen53wm4sFK4Y.jpg,http://imgm3.cnmo-img.com.cn/cnmo_product/23/663/cenDWEeyNh6E.jpg
+     * RelatedArticles : 放眼全球 一加7 Pro 90Hz流体屏受到海外媒体一致好评,http://smartcar.cnmo.com/news/665317.html
+     */
 
-        private String CPU;
-        private String FRONTCAMERA;
-        private String ID;
-        private String OS;
-        private String PHONEID;
-        private String PHONENAME;
-        private String PHONESCREENSIZE;
-        private String PHONESIZE;
-        private String PICS;
-        private String PIC;
-        private String PRIZE;
-        private String RAM;
-        private String REARCAMERA;
-        private String RELATEDARTICLES;
-        private String ROM;
-        private String SCREENRESOLUTION;
-        private String SELLPOINT;
-        private String TIMETOMARKET;
+    private String id;
+    private String pic;
+    private String phoneId;
+    private String phoneName;
+    private String sellPoint;
+    private String prize;
+    private String timeToMarket;
+    private String phoneSize;
+    private String phoneScreenSize;
+    private String screenResolution;
+    private String RearCamera;
+    private String FrontCamera;
+    private String os;
+    private String cpu;
+    private String ram;
+    private String rom;
+    private String pics;
+    private String RelatedArticles;
 
-    public String getPIC() {
-        return PIC;
+    public String getPic() {
+        return pic;
     }
 
-    public void setPIC(String PIC) {
-        this.PIC = PIC;
+    public void setPic(String pic) {
+        this.pic = pic;
     }
 
-    public String getCPU() {
-            return CPU;
-        }
+    public String getId() {
+        return id;
+    }
 
-        public void setCPU(String CPU) {
-            this.CPU = CPU;
-        }
+    public void setId(String id) {
+        this.id = id;
+    }
 
-        public String getFRONTCAMERA() {
-            return FRONTCAMERA;
-        }
+    public String getPhoneId() {
+        return phoneId;
+    }
 
-        public void setFRONTCAMERA(String FRONTCAMERA) {
-            this.FRONTCAMERA = FRONTCAMERA;
-        }
+    public void setPhoneId(String phoneId) {
+        this.phoneId = phoneId;
+    }
 
-        public String getID() {
-            return ID;
-        }
+    public String getPhoneName() {
+        return phoneName;
+    }
 
-        public void setID(String ID) {
-            this.ID = ID;
-        }
+    public void setPhoneName(String phoneName) {
+        this.phoneName = phoneName;
+    }
 
-        public String getOS() {
-            return OS;
-        }
+    public String getSellPoint() {
+        return sellPoint;
+    }
 
-        public void setOS(String OS) {
-            this.OS = OS;
-        }
+    public void setSellPoint(String sellPoint) {
+        this.sellPoint = sellPoint;
+    }
 
-        public String getPHONEID() {
-            return PHONEID;
-        }
+    public String getPrize() {
+        return prize;
+    }
 
-        public void setPHONEID(String PHONEID) {
-            this.PHONEID = PHONEID;
-        }
+    public void setPrize(String prize) {
+        this.prize = prize;
+    }
 
-        public String getPHONENAME() {
-            return PHONENAME;
-        }
+    public String getTimeToMarket() {
+        return timeToMarket;
+    }
 
-        public void setPHONENAME(String PHONENAME) {
-            this.PHONENAME = PHONENAME;
-        }
+    public void setTimeToMarket(String timeToMarket) {
+        this.timeToMarket = timeToMarket;
+    }
 
-        public String getPHONESCREENSIZE() {
-            return PHONESCREENSIZE;
-        }
+    public String getPhoneSize() {
+        return phoneSize;
+    }
 
-        public void setPHONESCREENSIZE(String PHONESCREENSIZE) {
-            this.PHONESCREENSIZE = PHONESCREENSIZE;
-        }
+    public void setPhoneSize(String phoneSize) {
+        this.phoneSize = phoneSize;
+    }
 
-        public String getPHONESIZE() {
-            return PHONESIZE;
-        }
+    public String getPhoneScreenSize() {
+        return phoneScreenSize;
+    }
 
-        public void setPHONESIZE(String PHONESIZE) {
-            this.PHONESIZE = PHONESIZE;
-        }
+    public void setPhoneScreenSize(String phoneScreenSize) {
+        this.phoneScreenSize = phoneScreenSize;
+    }
 
-        public String getPICS() {
-            return PICS;
-        }
+    public String getScreenResolution() {
+        return screenResolution;
+    }
 
-        public void setPICS(String PICS) {
-            this.PICS = PICS;
-        }
+    public void setScreenResolution(String screenResolution) {
+        this.screenResolution = screenResolution;
+    }
 
-        public String getPRIZE() {
-            return PRIZE;
-        }
+    public String getRearCamera() {
+        return RearCamera;
+    }
 
-        public void setPRIZE(String PRIZE) {
-            this.PRIZE = PRIZE;
-        }
+    public void setRearCamera(String RearCamera) {
+        this.RearCamera = RearCamera;
+    }
 
-        public String getRAM() {
-            return RAM;
-        }
+    public String getFrontCamera() {
+        return FrontCamera;
+    }
 
-        public void setRAM(String RAM) {
-            this.RAM = RAM;
-        }
+    public void setFrontCamera(String FrontCamera) {
+        this.FrontCamera = FrontCamera;
+    }
 
-        public String getREARCAMERA() {
-            return REARCAMERA;
-        }
+    public String getOs() {
+        return os;
+    }
 
-        public void setREARCAMERA(String REARCAMERA) {
-            this.REARCAMERA = REARCAMERA;
-        }
+    public void setOs(String os) {
+        this.os = os;
+    }
 
-        public String getRELATEDARTICLES() {
-            return RELATEDARTICLES;
-        }
+    public String getCpu() {
+        return cpu;
+    }
 
-        public void setRELATEDARTICLES(String RELATEDARTICLES) {
-            this.RELATEDARTICLES = RELATEDARTICLES;
-        }
+    public void setCpu(String cpu) {
+        this.cpu = cpu;
+    }
 
-        public String getROM() {
-            return ROM;
-        }
+    public String getRam() {
+        return ram;
+    }
 
-        public void setROM(String ROM) {
-            this.ROM = ROM;
-        }
+    public void setRam(String ram) {
+        this.ram = ram;
+    }
 
-        public String getSCREENRESOLUTION() {
-            return SCREENRESOLUTION;
-        }
+    public String getRom() {
+        return rom;
+    }
 
-        public void setSCREENRESOLUTION(String SCREENRESOLUTION) {
-            this.SCREENRESOLUTION = SCREENRESOLUTION;
-        }
+    public void setRom(String rom) {
+        this.rom = rom;
+    }
 
-        public String getSELLPOINT() {
-            return SELLPOINT;
-        }
+    public String getPics() {
+        return pics;
+    }
 
-        public void setSELLPOINT(String SELLPOINT) {
-            this.SELLPOINT = SELLPOINT;
-        }
+    public void setPics(String pics) {
+        this.pics = pics;
+    }
 
-        public String getTIMETOMARKET() {
-            return TIMETOMARKET;
-        }
+    public String getRelatedArticles() {
+        return RelatedArticles;
+    }
 
-        public void setTIMETOMARKET(String TIMETOMARKET) {
-            this.TIMETOMARKET = TIMETOMARKET;
-        }
+    public void setRelatedArticles(String RelatedArticles) {
+        this.RelatedArticles = RelatedArticles;
+    }
 
     @Override
     public String toString() {
-        return "PhoneBean{" +
-                "CPU='" + CPU + '\'' +
-                ", FRONTCAMERA='" + FRONTCAMERA + '\'' +
-                ", ID=" + ID +
-                ", OS='" + OS + '\'' +
-                ", PHONEID=" + PHONEID +
-                ", PHONENAME='" + PHONENAME + '\'' +
-                ", PHONESCREENSIZE='" + PHONESCREENSIZE + '\'' +
-                ", PHONESIZE='" + PHONESIZE + '\'' +
-                ", PICS='" + PICS + '\'' +
-                ", PIC='" + PIC + '\'' +
-                ", PRIZE='" + PRIZE + '\'' +
-                ", RAM='" + RAM + '\'' +
-                ", REARCAMERA='" + REARCAMERA + '\'' +
-                ", RELATEDARTICLES='" + RELATEDARTICLES + '\'' +
-                ", ROM='" + ROM + '\'' +
-                ", SCREENRESOLUTION='" + SCREENRESOLUTION + '\'' +
-                ", SELLPOINT='" + SELLPOINT + '\'' +
-                ", TIMETOMARKET=" + TIMETOMARKET +
-                '}';
+        return "PhoneBean{" + "id='" + id + '\'' +"pic='" + pic + '\'' + ", phoneId='" + phoneId + '\'' + ", phoneName='" + phoneName + '\'' + ", sellPoint='" + sellPoint + '\'' + ", prize='" + prize + '\'' + ", timeToMarket='" + timeToMarket + '\'' + ", phoneSize='" + phoneSize + '\'' + ", phoneScreenSize='" + phoneScreenSize + '\'' + ", screenResolution='" + screenResolution + '\'' + ", RearCamera='" + RearCamera + '\'' + ", FrontCamera='" + FrontCamera + '\'' + ", os='" + os + '\'' + ", cpu='" + cpu + '\'' + ", ram='" + ram + '\'' + ", rom='" + rom + '\'' + ", pics='" + pics + '\'' + ", RelatedArticles='" + RelatedArticles + '\'' + '}';
     }
 }

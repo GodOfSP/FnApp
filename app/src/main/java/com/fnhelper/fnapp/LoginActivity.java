@@ -280,9 +280,12 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 if (response.isSuccessful()) {
                     if (RESULT_OK.equals(response.body().getCode())){
                         userId = response.body().getData();
-                        Toast.makeText(LoginActivity.this,response.body().getMsg(),Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(LoginActivity.this,MainActivity.class));
                         finish();
+                        Toast.makeText(LoginActivity.this,response.body().getMsg(),Toast.LENGTH_SHORT).show();
+                    }else {
+                        mPasswordView.setError(response.body().getMsg());
+                        mPasswordView.requestFocus();
                     }
                 } else {
                     mPasswordView.setError(response.message());

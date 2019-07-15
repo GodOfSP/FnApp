@@ -7,18 +7,21 @@
     tools:context="com.fnhelper.fnapp.PhoneDetailAc">
 
 
+
     <cn.bingoogolapple.bgabanner.BGABanner
 
         android:id="@+id/imgs"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="300dp"
         android:tag="pic"
-        app:banner_pageChangeDuration="1000"
-        app:banner_pointAutoPlayAble="false"
+        app:banner_pageChangeDuration="2000"
+        app:banner_pointAutoPlayAble="true"
+        app:banner_tipTextColor="@color/colorAccent"
+        app:banner_tipTextSize="18sp"
         app:banner_pointContainerBackground="@android:color/transparent"
         app:banner_pointDrawable="@drawable/bga_banner_selector_point_hollow"
         app:banner_pointTopBottomMargin="15dp"
-        app:banner_transitionEffect="alpha" />
+        app:banner_transitionEffect="fade" />
 
 
     <LinearLayout
@@ -31,6 +34,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="12dp"
             android:orientation="horizontal">
 
 
@@ -118,6 +122,7 @@
 
         </LinearLayout>
         <LinearLayout
+            android:padding="12dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -207,6 +212,7 @@
 
         </LinearLayout>
         <LinearLayout
+            android:padding="12dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -296,6 +302,7 @@
 
         </LinearLayout>
         <LinearLayout
+            android:padding="12dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -413,6 +420,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="16dp"
+            android:layout_marginTop="12dp"
             android:text="标签：面部识别,拍照手机,全面屏,自拍神器,后置三摄,骁龙855,八核手机,大屏手机,大容量电池,快充手机,光学防抖,2.5D弧面屏,指纹识别,支持NFC,游戏手机,智能手机,4G手机"
             />
 

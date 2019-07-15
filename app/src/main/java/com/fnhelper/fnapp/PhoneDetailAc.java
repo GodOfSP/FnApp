@@ -56,41 +56,42 @@ public class PhoneDetailAc extends AppCompatActivity {
             }
         });
 
-        mContentBanner.setData(Arrays.asList( "http://imgm.cnmo-img.com.cn/cnmo_product/23/390/cezKWsNHOacW.jpg", "http://imgm5.cnmo-img.com.cn/cnmo_product/23/215/ceqU8oHYTTZ66.jpg","http://imgm9.cnmo-img.com.cn/cnmo_product/23/429/cedkomKvqblIY.jpg"), Arrays.asList( "提示文字2", "提示文字3","asd"));
+
+
     }
 
 
     private void getDetailHttp(){
 
 
-        RetrofitService.createMyAPI().getPhoneDetail(phoneId).enqueue(new Callback<BaseResult<PhoneBean>>() {
+        RetrofitService.createMyAPI().getPhoneDetail(phoneId).enqueue(new Callback<BaseResult<ArrayList<PhoneBean>>>() {
 
             @Override
-            public void onResponse(Call<BaseResult<PhoneBean>> call, Response<BaseResult<PhoneBean>> response) {
+            public void onResponse(Call<BaseResult<ArrayList<PhoneBean>>> call, Response<BaseResult<ArrayList<PhoneBean>>> response) {
 
                 System.out.println(call.request().toString());
                 System.out.println(response.body().toString());
 
                 if (response.isSuccessful()) {
                     if (RetrofitService.RESULT_OK.equals(response.body().getCode())){
-                        final PhoneBean phoneBean = response.body().getData();
-                        ((TextView)findViewById(R.id.timeToMarket)).setText(phoneBean.getTIMETOMARKET());
-                        ((TextView)findViewById(R.id.phoneSize)).setText(phoneBean.getPHONESIZE());
-                        ((TextView)findViewById(R.id.phoneScreenSize)).setText(phoneBean.getPHONESCREENSIZE());
-                        ((TextView)findViewById(R.id.screenResolution)).setText(phoneBean.getSCREENRESOLUTION());
-                        ((TextView)findViewById(R.id.RearCamera)).setText(phoneBean.getREARCAMERA());
-                        ((TextView)findViewById(R.id.FrontCamera)).setText(phoneBean.getFRONTCAMERA());
-                        ((TextView)findViewById(R.id.os)).setText(phoneBean.getOS());
-                        ((TextView)findViewById(R.id.ram_rom)).setText(phoneBean.getRAM()+phoneBean.getROM());
-                        ((TextView)findViewById(R.id.sellPoint)).setText(phoneBean.getSELLPOINT());
-                        ((TextView)findViewById(R.id.RelatedArticles)).setText(phoneBean.getRELATEDARTICLES().split(",")[0]);
+                        final PhoneBean phoneBean = response.body().getData().get(0);
+                        ((TextView)findViewById(R.id.timeToMarket)).setText(phoneBean.getTimeToMarket());
+                        ((TextView)findViewById(R.id.phoneSize)).setText(phoneBean.getPhoneSize());
+                        ((TextView)findViewById(R.id.phoneScreenSize)).setText(phoneBean.getPhoneScreenSize());
+                        ((TextView)findViewById(R.id.screenResolution)).setText(phoneBean.getScreenResolution());
+                        ((TextView)findViewById(R.id.RearCamera)).setText(phoneBean.getRearCamera());
+                        ((TextView)findViewById(R.id.FrontCamera)).setText(phoneBean.getFrontCamera());
+                        ((TextView)findViewById(R.id.os)).setText(phoneBean.getOs());
+                        ((TextView)findViewById(R.id.ram_rom)).setText(phoneBean.getRam()+phoneBean.getRom());
+                        ((TextView)findViewById(R.id.sellPoint)).setText(phoneBean.getSellPoint());
+                        ((TextView)findViewById(R.id.RelatedArticles)).setText(phoneBean.getRelatedArticles().split(",")[0]);
                         ((TextView)findViewById(R.id.RelatedArticles)).setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                              String x =  phoneBean.getRELATEDARTICLES().split(",")[1];
+                              String x =  phoneBean.getRelatedArticles().split(",")[1];
                             }
                         });
-
+                        mContentBanner.setData(Arrays.asList(phoneBean.getPics().split(",")),Arrays.asList("市场价: "+phoneBean.getPrize()));
                     }
                 }
 
@@ -98,7 +99,7 @@ public class PhoneDetailAc extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<BaseResult<PhoneBean>> call, Throwable t) {
+            public void onFailure(Call<BaseResult<ArrayList<PhoneBean>>> call, Throwable t) {
 
             }
 

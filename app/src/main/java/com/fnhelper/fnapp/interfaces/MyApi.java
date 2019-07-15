@@ -7,7 +7,7 @@ import com.fnhelper.fnapp.data.PhoneBean;
 import java.util.ArrayList;
 
 import retrofit2.Call;
-import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
 
@@ -27,8 +27,21 @@ public interface MyApi {
     Call<BaseResult<ArrayList<PhoneBean>>> getPhoneList();
 
     // 获取手机详情
-    @POST("/getPhoneDetail")
-    Call<BaseResult<PhoneBean>> getPhoneDetail(@Query("phoneId") String phoneId);
+    @POST("/getPhonedDetail")
+    Call<BaseResult<ArrayList<PhoneBean>>> getPhoneDetail(@Query("phoneId") String phoneId);
+
+    // 添加对比
+    @POST("/addContrast")
+    Call<BaseResult<String>> addContrast(@Query("userId") String userId,@Query("phoneId") String phoneId);
+
+    // 获取对比列表数量
+    @GET("/addContrast")
+    Call<BaseResult<String>> addContrast(@Query("userId") String userId);
+
+
+    // 获取对比列表
+    @POST("/getContrastList")
+    Call<BaseResult<ArrayList<PhoneBean>>> getContrastList(@Query("userId") String userId);
 
 
 }

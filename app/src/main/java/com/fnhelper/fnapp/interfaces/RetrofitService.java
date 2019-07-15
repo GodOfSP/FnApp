@@ -51,7 +51,6 @@ public class RetrofitService {
     }
 
 
-
     public static String userId = "";
     public static String phoneId = "";
     public static String RESULT_OK = "200";
@@ -67,21 +66,20 @@ public class RetrofitService {
                 if (myApi == null) {
                     OkHttpClient.Builder builder = new OkHttpClient.Builder()
                             //设置超时时间
-                            .retryOnConnectionFailure(false  );
-                            //设置日志拦截器
-
+                            .retryOnConnectionFailure(false);
+                    //设置日志拦截器
 
 
                     onHttps(builder);
                     OkHttpClient okHttpClient = builder.build();
                     //创建Retrofit
                     Retrofit retrofit = new Retrofit.Builder()
-                           // .baseUrl(BuildConfig.YBSX_COMMON_API)
-                         .baseUrl("https://sy.ybveg.com/")
-                        // .baseUrl("https://syx.ybveg.com/")
-                          // .baseUrl("http://sy.ybveg.com/")
-                        .baseUrl("http://172.16.2.123:8080/")
-                        .baseUrl("http://192.168.1.7:8080/") //家
+                            // .baseUrl(BuildConfig.YBSX_COMMON_API)
+                            .baseUrl("https://sy.ybveg.com/")
+                            // .baseUrl("https://syx.ybveg.com/")
+                            // .baseUrl("http://sy.ybveg.com/")
+                            .baseUrl("http://192.168.1.7:8080/") //家
+                            .baseUrl("http://172.16.2.125:8080/") //公司
                             //   .baseUrl("http://172.16.5.66:85/")
                             //    .baseUrl("http://172.16.2.39:85/")
                             //  .baseUrl("http://172.16.4.209:85/")
@@ -89,8 +87,7 @@ public class RetrofitService {
                             //添加Gson转换器
                             .addConverterFactory(GsonConverterFactory.create())
                             //添加RxJava连接器
-                            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                            .build();
+                            .addCallAdapterFactory(RxJava2CallAdapterFactory.create()).build();
                     myApi = retrofit.create(MyApi.class);
 
                 }
@@ -104,6 +101,7 @@ public class RetrofitService {
 
     /**
      * 获取支持https的SocketFactory
+     *
      * @return
      * @throws Exception
      */
@@ -111,15 +109,11 @@ public class RetrofitService {
         //创建一个不验证证书链的证书信任管理器。
         final TrustManager[] trustAllCerts = new TrustManager[]{new X509TrustManager() {
             @Override
-            public void checkClientTrusted(
-                    java.security.cert.X509Certificate[] chain,
-                    String authType) throws CertificateException {
+            public void checkClientTrusted(java.security.cert.X509Certificate[] chain, String authType) throws CertificateException {
             }
 
             @Override
-            public void checkServerTrusted(
-                    java.security.cert.X509Certificate[] chain,
-                    String authType) throws CertificateException {
+            public void checkServerTrusted(java.security.cert.X509Certificate[] chain, String authType) throws CertificateException {
             }
 
             @Override
@@ -130,12 +124,11 @@ public class RetrofitService {
 
         // Install the all-trusting trust manager
         final SSLContext sslContext = SSLContext.getInstance("TLS");
-        sslContext.init(null, trustAllCerts,
-                new java.security.SecureRandom());
+        sslContext.init(null, trustAllCerts, new java.security.SecureRandom());
         // Create an ssl socket factory with our all-trusting manager
-        return sslContext
-                .getSocketFactory();
+        return sslContext.getSocketFactory();
     }
+
     private static void onHttps(OkHttpClient.Builder builder) {
         try {
             builder.sslSocketFactory(getSSLSocketFactory()).hostnameVerifier(org.apache.http.conn.ssl.SSLSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER);
